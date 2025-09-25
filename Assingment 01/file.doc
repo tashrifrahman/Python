@@ -1,0 +1,103 @@
+1. What happens if you assign a string value to a variable that previously held an integer?
+In Python, variables are dynamically typed. This means you can reassign a variable to a value of a different type. The variable will simply refer to the new value, and the old value will be garbage-collected if no other references exist.
+
+Example:
+
+python
+x = 10
+x = "hello"
+print(x)  # Output: hello
+2. How can you check the data type of a variable in Python?
+Use the type() function.
+
+Example:
+
+python
+x = 10
+print(type(x))  # Output: <class 'int'>
+3. What's the difference between int("15") and str(15)?
+int("15") converts the string "15" to an integer 15.
+
+str(15) converts the integer 15 to a string "15".
+
+4. Write a Python program that takes two numbers as input from the user and performs arithmetic operations
+python
+# Taking input from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Performing arithmetic operations
+print("Addition:", num1 + num2)
+print("Subtraction:", num1 - num2)
+print("Multiplication:", num1 * num2)
+print("Division:", num1 / num2)
+print("Modulus:", num1 % num2)
+print("Exponentiation:", num1 ** num2)
+5. How can you take multiple inputs from the user in a single line?
+Use input().split().
+
+Example:
+
+python
+a, b = input("Enter two values: ").split()
+# If numbers are expected:
+a, b = map(int, input().split())
+6. What happens if you try to convert a string like "hello" to an integer using int()?
+It raises a ValueError because "hello" is not a valid integer.
+
+7. Can a variable change its data type during program execution in Python?
+Yes, because Python is dynamically typed.
+
+Example:
+
+python
+x = 10      # int
+x = "text"  # now str
+8. What's the difference between the print() and input() functions?
+print() outputs data to the console.
+
+input() takes data from the user via the console.
+
+9. Why does input() always return a string, and how do you handle it?
+input() returns a string to allow flexible input. To use it as a number, convert it using int() or float().
+
+Example:
+
+python
+age = int(input("Enter your age: "))
+10. How would you convert the string "15.5" to an integer, float, boolean & complex?
+python
+s = "15.5"
+
+to_int = int(float(s))  # 15
+to_float = float(s)     # 15.5
+to_bool = bool(s)       # True
+to_complex = complex(s) # (15.5+0j)
+Bonus Questions
+1. How does a variable work in memory? In Python, does it hold a reference or a value?
+In Python, a variable holds a reference to an object in memory, not the value itself. The object stores the actual data.
+
+2. What is the difference between mutable and immutable data types? Explain with real-life examples.
+Mutable: Can be changed after creation (e.g., list, dict, set).
+Example: A notebook where you can add or remove pages.
+
+Immutable: Cannot be changed after creation (e.g., int, str, tuple).
+Example: A printed book — you can’t change its pages.
+
+3. What is the difference between type conversion and type casting in Python?
+In Python, the terms are often used interchangeably, but:
+
+Type conversion can be implicit (automatic) or explicit (manual).
+
+Type casting usually refers to explicit conversion using functions like int(), str(), etc.
+
+4. What data type is always returned from input() in Python, and how can it be used as a numeric type?
+input() always returns a string. Convert it using int() or float() for numeric operations.
+
+5. What happens when multiple values are given inside the print() function?
+They are printed separated by spaces (default separator). You can change the separator using the sep parameter.
+
+Example:
+
+python
+print("Hello", "World", sep="-")  # Output: Hello-World
