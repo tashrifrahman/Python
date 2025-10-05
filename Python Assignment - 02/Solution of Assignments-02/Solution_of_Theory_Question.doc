@@ -1,0 +1,54 @@
+1. What is a String in Programming?
+
+   A string is a sequence of characters used to represent text. In Python, strings are immutable sequences of Unicode characters, 
+   enclosed in single, double, or triple quotes. They support indexing, slicing, and various methods for text manipulation.
+
+
+2. Difference Between String, Word, and Sentence in Text Processing.
+
+   String: Any sequence of characters (may include letters, digits, punctuation, whitespace).
+
+   Word: A token representing a meaningful unit of text, usually a contiguous run of alphabetic characters or alphanumeric characters.
+
+   Sentence: A higher-level unit — a sequence of words and punctuation that expresses a complete thought; often detected by sentence 
+             boundary detection (e.g., punctuation like . ? ! plus rules).
+
+
+3. What is String Immutability, and Why Does It Matter?
+
+   String immutability means once a string object is created, it cannot be changed. Operations that look like modifications actually create new string objects. 
+   It matters because:
+
+   -> Improves safety (no accidental changes shared across references).
+
+   -> Enables optimizations (interning, caching, hashability for dict keys).
+
+   -> Predictable behavior when strings are used as keys in dictionaries.
+
+
+4. What Are Common String Operations Used in NLP?
+
+   Common operations:
+
+  - Tokenization: split text into tokens (words/subwords).
+
+  - Lowercasing / normalization: unify case and remove diacritics.
+
+  - Stemming / lemmatization: reduce words to stems or lemmas.
+
+  - Stopword removal: drop common words.
+
+  - POS tagging / chunking: annotate tokens with grammatical roles.
+
+  - n-gram extraction: build sequences of n tokens.
+
+  - Regex-based cleaning: remove noise, URLs, mentions.
+
+  - Subword encoding: BPE/WordPiece for model inputs.
+
+
+5. What Is Tokenization, and How Is It Related to Strings?
+
+   Tokenization is the process of splitting text into smaller units (tokens), such as words or subwords.
+   It directly operates on strings — the input is a string, and the output is a list of strings (tokens). 
+   It’s a fundamental step in NLP preprocessing.
