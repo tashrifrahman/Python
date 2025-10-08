@@ -1,0 +1,5 @@
+n = int(input())
+arr = list(map(int, input().split()))
+max_candle = max(arr)
+count = arr.count(max_candle)
+print(count)
